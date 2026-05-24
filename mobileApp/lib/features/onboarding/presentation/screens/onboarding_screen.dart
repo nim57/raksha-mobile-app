@@ -26,51 +26,146 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
         child: Column(
           children: [
             // ----- Fixed Header -----
-            Container(
-              height: touchTarget,
-              padding: const EdgeInsets.symmetric(horizontal: marginMobile),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1B1B1D).withOpacity(0.6),
-                border: Border(
-                  bottom: BorderSide(color: Colors.white.withOpacity(0.1)),
+            Padding(
+              padding: const EdgeInsets.only(left: 318.0, top: 20),
+              child: GestureDetector(
+                onTap: () => debugPrint('Skip tapped'),
+                child: Text(
+                  'Skip',
+                  style: GoogleFonts.inter(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.7,
+                    color: const Color(0xFFE7BDB7),
+                  ),
                 ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            ),
+
+            SizedBox(height: 140),
+
+            // ----- Sos Animation  -----
+            const SOSButton(),
+
+            const SizedBox(height: 140),
+
+            // ----- Footer -----
+
+            // Text content
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
                 children: [
+                  Text(
+                    'Instant Emergency Response',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 28,
+                      fontWeight: FontWeight.w700,
+                      height: 1.2,
+                      color: const Color(0xFFE4E2E4),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Text(
+                    'One tap to alert emergency services and your trusted contacts instantly.',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.inter(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      height: 1.5,
+                      color: const Color(0xFFE7BDB7),
+                    ),
+                  ),
+
+
+                  const SizedBox(height: 42),
+
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.shield, color: const Color(0xFFFFB4AA), size: 24),
+                      Container(
+                        width: 32,
+                        height: 8,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFFF5545),
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                      ),
                       const SizedBox(width: 8),
-                      Text(
-                        'GUARDIAN SOS',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: -0.5,
-                          color: const Color(0xFFFFB4AA),
+                      Container(
+                        width: 8,
+                        height: 8,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF353437),
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Container(
+                        width: 8,
+                        height: 8,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF353437),
+                          shape: BoxShape.circle,
                         ),
                       ),
                     ],
                   ),
+
+                  const SizedBox(height: 46),
+
+                  // button
                   GestureDetector(
-                    onTap: () => debugPrint('Skip tapped'),
-                    child: Text(
-                      'Skip',
-                      style: GoogleFonts.inter(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 0.7,
-                        color: const Color(0xFFE7BDB7),
+                    child: AnimatedScale(
+                      scale: 0.96 ,
+                      duration: const Duration(milliseconds: 100),
+                      child: Container(
+                        height: 56,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          gradient: const LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [Color(0xFFFF5545), Color(0xFFD32F2F)],
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.3),
+                              blurRadius: 12,
+                              offset: const Offset(0, 4),
+                              spreadRadius: 0,
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Next',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            const Icon(
+                              Icons.arrow_forward,
+                              color: Colors.white,
+                              size: 20,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
+
+
                 ],
               ),
             ),
-
-            // ----- Extracted SOS Button Widget -----
-            const SOSButton(),
 
           ],
         ),
@@ -78,3 +173,6 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
     );
   }
 }
+
+
+
