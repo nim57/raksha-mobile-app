@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'features/onboarding/presentation/screens/onboarding_screen1.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));

@@ -50,7 +50,6 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                 print('Button tapped!');
               },
             ),
-
           ],
         ),
       ),
