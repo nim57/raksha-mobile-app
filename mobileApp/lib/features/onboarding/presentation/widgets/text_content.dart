@@ -32,14 +32,17 @@ class _TextContentState extends State<TextContent> {
           ),
         ),
         const SizedBox(height: 20),
-        Text(
-          widget.description,
-          textAlign: TextAlign.center,
-          style: GoogleFonts.inter(
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
-            height: 1.5,
-            color: const Color(0xFFE7BDB7),
+        Padding(
+          padding: const EdgeInsets.only(left: 18.0, right: 18.0),
+          child: Text(
+            widget.description,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.inter(
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+              height: 1.5,
+              color: const Color(0xFFE7BDB7),
+            ),
           ),
         ),
       ],

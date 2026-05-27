@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobileapp/core/constants/app_colors.dart';
 
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_text.dart';
@@ -17,20 +18,13 @@ class OnboardingScreen2 extends StatefulWidget {
 class _OnboardingScreen2State extends State<OnboardingScreen2> {
   bool _isLiveLocationEnabled = true;
 
-  // Colors from the original design
-  static const Color primary = Color(0xFFFFB4AA);
-  static const Color primaryContainer = Color(0xFFFF5545);
-  static const Color secondary = Color(0xFFFFBC7C);
-  static const Color surface = Color(0xFF131315);
-  static const Color onSurface = Color(0xFFE4E2E4);
-  static const Color onSurfaceVariant = Color(0xFFE7BDB7);
-  static const Color tertiary = Color(0xFFADC6FF);
-  static const Color glassBg = Color(0x661F1F21); // 0.4 opacity
+  // // Colors from the original design
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: surface,
+      backgroundColor: AppColors.neutral,
       body: Stack(
         children: [
           // Main scrollable content
@@ -68,7 +62,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                         child: Container(
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: glassBg,
+                            color: AppColors.glassBg,
                             borderRadius: BorderRadius.circular(24),
                             border: Border.all(color: Colors.white.withOpacity(0.08)),
                             boxShadow: [
@@ -80,11 +74,11 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                               Container(
                                 width: 48, height: 48,
                                 decoration: BoxDecoration(
-                                  color: primary.withOpacity(0.1),
+                                  color: AppColors.primary.withOpacity(0.1),
                                   borderRadius: BorderRadius.circular(12),
-                                  border: Border.all(color: primary.withOpacity(0.2)),
+                                  border: Border.all(color: AppColors.primary.withOpacity(0.2)),
                                 ),
-                                child: const Icon(Icons.contact_emergency, color: primary),
+                                child: const Icon(Icons.contact_emergency, color: AppColors.primary),
                               ),
                               const SizedBox(width: 16),
                               Expanded(
@@ -95,17 +89,17 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                                       'Import Emergency Contacts',
                                       style: GoogleFonts.inter(
                                         fontSize: 14, fontWeight: FontWeight.w700,
-                                        color: onSurface, letterSpacing: 0.7,
+                                        color: AppColors.onSurface, letterSpacing: 0.7,
                                       ),
                                     ),
                                     Text(
                                       'Sync with your phone\'s address book',
-                                      style: GoogleFonts.inter(fontSize: 13, color: onSurfaceVariant),
+                                      style: GoogleFonts.inter(fontSize: 13, color: AppColors.onSurfaceVariant),
                                     ),
                                   ],
                                 ),
                               ),
-                              Icon(Icons.chevron_right, color: onSurfaceVariant.withOpacity(0.5)),
+                              Icon(Icons.chevron_right, color: AppColors.onSurfaceVariant.withOpacity(0.5)),
                             ],
                           ),
                         ),
@@ -115,7 +109,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: glassBg,
+                          color: AppColors.glassBg,
                           borderRadius: BorderRadius.circular(24),
                           border: Border.all(color: Colors.white.withOpacity(0.08)),
                           boxShadow: [
@@ -127,11 +121,11 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                             Container(
                               width: 48, height: 48,
                               decoration: BoxDecoration(
-                                color: secondary.withOpacity(0.1),
+                                color: AppColors.secondary.withOpacity(0.1),
                                 borderRadius: BorderRadius.circular(12),
-                                border: Border.all(color: secondary.withOpacity(0.2)),
+                                border: Border.all(color: AppColors.secondary.withOpacity(0.2)),
                               ),
-                              child: const Icon(Icons.share_location, color: secondary),
+                              child: const Icon(Icons.share_location, color: AppColors.secondary),
                             ),
                             const SizedBox(width: 16),
                             Expanded(
@@ -142,12 +136,12 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                                     'Live Location Sharing',
                                     style: GoogleFonts.inter(
                                       fontSize: 14, fontWeight: FontWeight.w700,
-                                      color: onSurface, letterSpacing: 0.7,
+                                      color: AppColors.onSurface, letterSpacing: 0.7,
                                     ),
                                   ),
                                   Text(
                                     'Active only during alerts',
-                                    style: GoogleFonts.inter(fontSize: 13, color: onSurfaceVariant),
+                                    style: GoogleFonts.inter(fontSize: 13, color: AppColors.onSurfaceVariant),
                                   ),
                                 ],
                               ),
@@ -155,8 +149,8 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                             Switch(
                               value: _isLiveLocationEnabled,
                               onChanged: (value) => setState(() => _isLiveLocationEnabled = value),
-                              activeColor: secondary,
-                              activeTrackColor: secondary.withOpacity(0.4),
+                              activeColor: AppColors.secondary,
+                              activeTrackColor: AppColors.secondary.withOpacity(0.4),
                               inactiveThumbColor: Colors.white,
                               inactiveTrackColor: Colors.white.withOpacity(0.2),
                             ),

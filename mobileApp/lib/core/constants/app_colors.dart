@@ -7,7 +7,9 @@ class AppColors {
   static const Color Terticry  = Color(0xFF007AFF);
   static const Color neutral  = Color(0xFF1C1C1E);
 
-  static const Color skipButtonText = Color(0xFFE7BDB7);
+  static const Color onSurface = Color(0xFFE4E2E4);
+  static const Color onSurfaceVariant = Color(0xFFE7BDB7);
+  static const Color glassBg = Color(0x661F1F21);
 
 
 }

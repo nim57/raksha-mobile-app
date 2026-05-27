@@ -14,7 +14,7 @@ class AppTextStyles {
       fontSize: AppDimensions.fontSmall,  // Assume you define fontSmall = 14.0
       fontWeight: FontWeight.w700,
       letterSpacing: 0.7,
-      color: AppColors.skipButtonText,    // = Color(0xFFE7BDB7)
+      color: AppColors.onSurfaceVariant,    // = Color(0xFFE7BDB7)
     );
   }
 }
