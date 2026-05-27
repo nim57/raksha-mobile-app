@@ -6,6 +6,7 @@ import '../widgets/scrollindicator.dart';
 import '../widgets/skip_button.dart';
 import '../widgets/sos_animation(1).dart';
 import '../widgets/text_content.dart';
+import 'OnboardingScreen2.dart' hide NextButton;
 
 class OnboardingScreen1 extends StatefulWidget {
   const OnboardingScreen1({super.key});
@@ -39,7 +40,7 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
             const SizedBox(height: 42),
 
             // Scroll Indicator
-            ScrollIndicator(),
+            ScrollIndicator(currentIndex: 0,),
 
             const SizedBox(height: 46),
 
@@ -47,7 +48,10 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
             NextButton(
               text: AppStrings.Get_Started,
               onPressed: () {
-                print('Button tapped!');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const OnboardingScreen2()),
+                );
               },
             ),
           ],

@@ -19,33 +19,30 @@ class TextContent extends StatefulWidget {
 class _TextContentState extends State<TextContent> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        children: [
-          Text(
-            widget.title,
-            textAlign: TextAlign.center,
-            style: GoogleFonts.montserrat(
-              fontSize: 28,
-              fontWeight: FontWeight.w700,
-              height: 1.2,
-              color: const Color(0xFFE4E2E4),
-            ),
+    return Column(
+      children: [
+        Text(
+          widget.title,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.montserrat(
+            fontSize: 28,
+            fontWeight: FontWeight.w700,
+            height: 1.2,
+            color: const Color(0xFFE4E2E4),
           ),
-          const SizedBox(height: 20),
-          Text(
-            widget.description,
-            textAlign: TextAlign.center,
-            style: GoogleFonts.inter(
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
-              height: 1.5,
-              color: const Color(0xFFE7BDB7),
-            ),
+        ),
+        const SizedBox(height: 20),
+        Text(
+          widget.description,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.inter(
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+            height: 1.5,
+            color: const Color(0xFFE7BDB7),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
