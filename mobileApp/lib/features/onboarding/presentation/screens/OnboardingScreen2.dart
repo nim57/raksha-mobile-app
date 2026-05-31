@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobileapp/core/constants/app_colors.dart';
+import 'package:mobileapp/features/auth/presentation/screens/face-recognition-screen.dart';
+import 'package:mobileapp/features/auth/presentation/screens/login_screen.dart';
 
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_text.dart';
@@ -176,7 +178,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const OnboardingScreen2()),
+                        MaterialPageRoute(builder: (context) => const FaceRecognitionScreen()),
                       );
                     },
                   ),
