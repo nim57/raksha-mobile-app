@@ -1,0 +1,30 @@
+flutter_native_splash:
+  # Common settings for both platforms
+  color: "#FFFFFF"                    # White background
+  image: assets/logo/logo.png         # Your logo (recommended size: 512x512)
+  android: true
+  ios: true
+
+  # iOS specific: controls how the image is scaled inside the onboarding
+  ios_content_mode: center            # Options: center, scaleAspectFit, scaleAspectFill
+
+  # Android 12+ specific (API 31+)
+  android_12:
+    color: "#FFFFFF"
+    image: assets/logo/logo.png
+
+
+
+
+
+
+
+
+                 # Logo takes 50% of screen width (0.0 to 1.0)
+
+  # For Android versions below 12 (API 30-)
+  # Controls how the image is scaled (gravity)
+  android_gravity: center              # Options: center, fill, zoom, top, bottom, etc.
+
+  # Optional: fullscreen onboarding
+  fullscreen: true                     # Hides status bar and navigation bar during onboarding
