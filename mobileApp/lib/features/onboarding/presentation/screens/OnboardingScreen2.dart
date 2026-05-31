@@ -168,14 +168,18 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                 const SizedBox(height: 10), // bottom padding for fixed button
 
                 // Next Button
-                NextButton(
-                  text: AppStrings.next,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const OnboardingScreen2()),
-                    );
-                  },
+                Padding(
+                  padding: const EdgeInsets.only(top: 28.0, left:
+                  18.0, right: 18.0),
+                  child: NextButton(
+                    text: AppStrings.next,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const OnboardingScreen2()),
+                      );
+                    },
+                  ),
                 ),
               ],
             ),

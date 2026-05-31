@@ -29,9 +29,6 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
 
     // Responsive spacing multipliers
     final double spacingAfterSkip = 140 * scaleFactor;
-    final double spacingAfterSos = 140 * scaleFactor;
-    final double spacingAfterText = 42 * scaleFactor;
-    final double spacingAfterIndicator = 46 * scaleFactor;
 
     return Scaffold(
       backgroundColor: AppColors.neutral,
@@ -72,9 +69,9 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                         padding: const EdgeInsets.only(left: 18.0, right: 18.0),
                         child: Column(
                           children: [
-                            SizedBox(height: spacingAfterIndicator),
+                            SizedBox(height:30 ),
                             ScrollIndicator(currentIndex: 0),
-                            SizedBox(height: spacingAfterIndicator),
+                              SizedBox(height: 25),
                             NextButton(
                               text: AppStrings.Get_Started,
                               onPressed: () {
