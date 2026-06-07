@@ -16,7 +16,20 @@ class AppStrings {
   static const String on_2_card_sub_title_1 = "Easily import your emergency contacts from your phone's contact list.";
   static const String on_2_card_title_2 = "Online or Offline sos Allert";
   static const String on_2_card_sub_title_2 = "Your Guardian Circle will be notified even if you don't have an internet connection, ensuring your safety in any situation.";
-  
+
+  // Login
+  static const String emailhint = "Enter your email";
+  static const String passwordhint = "Enter your password";
+  static const String login = "Login";
+  static const String dont_have_account = "Don't have an account? ";
+  static const String sign_up = "Sign Up";
+  static const String or = "OR Continue with";
+  static const String remember_me = "Remember me";
+  static const String forgot_password = "Forgot password?";
+  static const String sign_in = "Sign in to your Raksha account";
+  static const String email = "Email";
+  static const String password = "Password";
+  static const String Welcome_back = "Welcome back! 👋";
 
 
 }

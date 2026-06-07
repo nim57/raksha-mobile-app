@@ -11,5 +11,7 @@ class AppColors {
   static const Color onSurfaceVariant = Color(0xFFE7BDB7);
   static const Color glassBg = Color(0x661F1F21);
 
+  static const Color gray = Color(0xFF8E8E93);
+
 
 }

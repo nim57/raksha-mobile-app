@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:camera/camera.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+import 'login_screen.dart';
+
 // Global variable to hold camera list (may be null if initialization fails)
 List<CameraDescription>? cameras;
 
@@ -609,22 +611,30 @@ class _FaceRecognitionScreenState extends State<FaceRecognitionScreen>
               BoxShadow(color: Color(0xFF2E2E31), offset: Offset(-4, -4), blurRadius: 10),
             ],
           ),
-          child: const Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Continue',
-                  style: TextStyle(
-                    fontFamily: 'Montserrat',
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFFE4E2E4),
+          child:GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LoginScreen()),
+              );
+            },
+            child: const Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Continue',
+                    style: TextStyle(
+                      fontFamily: 'Montserrat',
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFFE4E2E4),
+                    ),
                   ),
-                ),
-                SizedBox(width: 8),
-                Icon(Icons.arrow_forward, color: Color(0xFFE4E2E4), size: 20),
-              ],
+                  SizedBox(width: 8),
+                  Icon(Icons.arrow_forward, color: Color(0xFFE4E2E4), size: 20),
+                ],
+              ),
             ),
           ),
         ),
