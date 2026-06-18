@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:camera/camera.dart';
+import 'package:mobileapp/features/onboarding/presentation/widgets/next_button.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'login_screen.dart';
@@ -598,46 +599,12 @@ class _FaceRecognitionScreenState extends State<FaceRecognitionScreen>
           ],
         ),
       ),
-      child: GestureDetector(
-        onTap: _onContinuePressed,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 150),
-          height: 56,
-          decoration: BoxDecoration(
-            color: const Color(0xFF1F1F21),
-            borderRadius: BorderRadius.circular(16),
-            boxShadow: const [
-              BoxShadow(color: Color(0xFF0A0A0B), offset: Offset(4, 4), blurRadius: 10),
-              BoxShadow(color: Color(0xFF2E2E31), offset: Offset(-4, -4), blurRadius: 10),
-            ],
-          ),
-          child:GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => LoginScreen()),
-              );
-            },
-            child: const Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Continue',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xFFE4E2E4),
-                    ),
-                  ),
-                  SizedBox(width: 8),
-                  Icon(Icons.arrow_forward, color: Color(0xFFE4E2E4), size: 20),
-                ],
-              ),
-            ),
-          ),
-        ),
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 178.0, left: 20, right: 20),
+        child: NextButton(text: 'Continue',
+            onPressed:(){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
+            } )
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mobileapp/core/constants/app_colors.dart';
 import 'package:mobileapp/core/constants/app_images.dart';
+import 'package:mobileapp/features/auth/presentation/screens/registration-screen.dart';
 import 'package:mobileapp/features/onboarding/presentation/widgets/next_button.dart';
 
 import '../../../../core/constants/app_text.dart';
@@ -164,7 +165,12 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     const Text(AppStrings.dont_have_account, style: TextStyle(color: AppColors.onSurface)),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const RegistrationScreen()),
+                          );
+                      },
                       child: const Text(
                         AppStrings.sign_up,
                         style: TextStyle(

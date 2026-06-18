@@ -31,5 +31,26 @@ class AppStrings {
   static const String password = "Password";
   static const String Welcome_back = "Welcome back! 👋";
 
+  // Registration
+  static const String create_account = "Create an account";
+  static const String sign_up_to_get_started = "Sign up to get started!";
+  static const String already_have_account = "Create an account? ";
+  static const String FULL_NAME = "Full Name";
+  static const String email_address = "Email Address";
+  static const String create_password = "Create Password";
+  static const String confirm_password = "Confirm Password";
+  static const String phone_number = "Phone Number";
+  static const String enter_full_name = "Enter your full name";
+  static const String enter_email = "Enter your email";
+  static const String enter_password = "Enter your password";
+  static const String enter_confirm_password = "Confirm your password";
+  static const String enter_phone_number = "Enter your phone number";
+  static const String accecpt1 = "I accept";
+  static const String accecpt2 = "Terms of Service";
+  static const String accecpt3 = "and";
+  static const String accecpt4 = "Privacy Policy";
+  static const String create = "Create Account";
+  static const String already_have = "Already have an account? ";
+  static const String login_now = "Login Now";
 
 }
