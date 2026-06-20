@@ -53,4 +53,17 @@ class AppStrings {
   static const String already_have = "Already have an account? ";
   static const String login_now = "Login Now";
 
+  // OTP Verification
+
+  static const String choose_verification_method = "Choose Verification Method";
+  static const String choose_verification_method_subtitle = "How would you like to receive your OTP?";
+  static const String verify_with_phone = "Verify with Phone Number";
+  static const String verify_with_email = "Verify with Email";
+  static const String otp_verification_title = "OTP Verification";
+  static const String otp_sent_to_phone = "We've sent a verification code to your phone";
+  static const String otp_sent_to_email = "We've sent a verification code to your email";
+  static const String otp_expired = "Code expired";
+  static const String resend_otp = "Resend OTP";
+  static const String verify = "Verify";
+
 }

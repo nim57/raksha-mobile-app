@@ -14,4 +14,6 @@ class AppImages {
   static String xLogo =
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/960px-X_logo_2023.svg.png?_=20250120013756";
 
+  static String otp_icon = "assets/authentication/shield-security.svg";
+
 }

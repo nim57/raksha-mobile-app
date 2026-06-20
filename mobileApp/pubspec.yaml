@@ -48,6 +48,8 @@ dependencies:
   flutter_svg: ^2.3.0
   camera: ^0.12.0+1
   permission_handler: ^12.0.2
+  iconsax_flutter: ^1.0.1
+  font_awesome_flutter: ^11.0.0
 
 flutter:
 
@@ -59,6 +61,7 @@ flutter:
     assets:
       - assets/logo/
       - assets/onboarding_screens/
+      - assets/authentication/
 
     fonts:
       - family: Poppins
