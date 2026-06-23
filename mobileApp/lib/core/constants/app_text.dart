@@ -54,16 +54,34 @@ class AppStrings {
   static const String login_now = "Login Now";
 
   // OTP Verification
-
   static const String choose_verification_method = "Choose Verification Method";
   static const String choose_verification_method_subtitle = "How would you like to receive your OTP?";
   static const String verify_with_phone = "Verify with Phone Number";
   static const String verify_with_email = "Verify with Email";
-  static const String otp_verification_title = "OTP Verification";
-  static const String otp_sent_to_phone = "We've sent a verification code to your phone";
-  static const String otp_sent_to_email = "We've sent a verification code to your email";
-  static const String otp_expired = "Code expired";
-  static const String resend_otp = "Resend OTP";
-  static const String verify = "Verify";
+  static const String verifyYourNumber = "Verify Your Number";
+  static const String weveSendCodeTo = "We've send a 6-digit code to";
+  static const String resendCodeIn = "Resend code in ";
+  static const String didntReceiveCode = "Didn't receive the code ?";
+  static const String resendCode = "Resend Code";
+  static const String verifyCode = "Verify Code";
+  static const String dataSecureMessage = "Your data is 100% secure";
+
+  // Permission Manage Screen
+  static const String locationTrackingTitle = "Live Location Tracking";
+  static const String locationTrackingSubtitle =
+      "We're tracking live location allows";
+  static const String wifiTitle = "Wi-Fi";
+  static const String wifiSubtitle = "Use Wi-Fi when internet is not working";
+  static const String bluetoothTitle = "Bluetooth";
+  static const String bluetoothSubtitle =
+      "Use Bluetooth when internet is not working";
+  static const String hotspotTitle = "Hotspot";
+  static const String hotspotSubtitle =
+      "Use Hotspot when internet is not working";
+  static const String contactsTitle = "Allow Contacts";
+  static const String contactsSubtitle =
+      "Access your contacts to find friends";
+  static const String allowAll = "Allow All";
+
 
 }

@@ -6,6 +6,8 @@ import 'package:mobileapp/core/constants/app_images.dart';
 import 'package:mobileapp/features/auth/presentation/screens/permition_manage_screen.dart';
 import 'package:mobileapp/features/onboarding/presentation/widgets/next_button.dart';
 
+import '../../../../core/constants/app_text.dart';
+
 class OtpVerificationScreen extends StatefulWidget {
   const OtpVerificationScreen({
     super.key,
@@ -97,8 +99,8 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 SizedBox(height: 60,),
                 
                 // text tile 
-                Text("Verify Your Number", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: AppColors.onSurface),),
-                const Text("We've send a 6-digit code to", style: TextStyle(fontSize: 16, color: AppColors.gray),),
+                Text(AppStrings.verifyYourNumber, style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: AppColors.onSurface),),
+                const Text(AppStrings.weveSendCodeTo, style: TextStyle(fontSize: 16, color: AppColors.gray),),
                 SizedBox(height: 5,),
                 Text("+94 701990179", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: AppColors.onSurface),),
 
@@ -201,7 +203,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   children: [
                     Icon(Iconsax.timer_1_copy, color: AppColors.Terticry,),
                     SizedBox(width: 8,),
-                    Text("Resend code in " , style: TextStyle(color: AppColors.gray),),
+                    Text(AppStrings.resendCodeIn , style: TextStyle(color: AppColors.gray),),
                     SizedBox(width: 8,),
                     Text("00.45", style: TextStyle(color: AppColors.Terticry, fontSize: 17),)
                   ],
@@ -210,13 +212,13 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 SizedBox(height: 25,),
 
                 // resend section
-                Text("Didn't receive the code ?", style: TextStyle(color: AppColors.gray),),
-                Text("Resend Code", style: TextStyle(color: AppColors.secondary, fontSize: 15),),
+                Text(AppStrings.didntReceiveCode, style: TextStyle(color: AppColors.gray),),
+                Text(AppStrings.resendCode, style: TextStyle(color: AppColors.secondary, fontSize: 15),),
 
                 SizedBox(height: 25,),
                 // button
 
-                NextButton( text: 'Verify Code', onPressed: (){
+                NextButton( text: AppStrings.verifyCode, onPressed: (){
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const PermissionManageScreen()),
@@ -233,7 +235,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                     color: AppColors.secondary,
                   ),
                     SizedBox(width: 5,),
-                    Text("Your data is 100% secure", style: TextStyle(color: AppColors.gray),),
+                    Text(AppStrings.dataSecureMessage, style: TextStyle(color: AppColors.gray),),
                 ],),
 
 

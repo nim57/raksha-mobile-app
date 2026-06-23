@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:mobileapp/core/constants/app_text.dart';
+import 'package:mobileapp/features/auth/presentation/screens/verification-success-screen.dart';
 import 'package:mobileapp/features/onboarding/presentation/widgets/next_button.dart';
-
 import '../../../../core/constants/app_colors.dart';
-import '../../../../core/constants/app_images.dart';
 import '../widgets/permission_card.dart';
 
 class PermissionManageScreen extends StatefulWidget {
@@ -53,8 +51,8 @@ class _PermitionManageScreenState extends State<PermissionManageScreen> {
             // Location card
             PermissionCard(
               isLocationTrackingOn: isLocationTrackingOn,
-              title: 'Live Location Tracking',
-              subtitle: "We're tracking live location allows",
+              title: AppStrings.locationTrackingTitle,
+              subtitle: AppStrings.locationTrackingSubtitle,
               icon: Iconsax.location_copy,
               onChanged: (value) {
                 setState(() {
@@ -67,8 +65,8 @@ class _PermitionManageScreenState extends State<PermissionManageScreen> {
             // Wi-Fi card
             PermissionCard(
               isLocationTrackingOn: isWifiOn,
-              title: 'Wi-Fi',
-              subtitle: "Use Wi-Fi when internet is not working",
+              title: AppStrings.wifiTitle,
+              subtitle: AppStrings.wifiSubtitle,
               icon: Iconsax.wifi_copy,
               onChanged: (value) {
                 setState(() {
@@ -81,8 +79,8 @@ class _PermitionManageScreenState extends State<PermissionManageScreen> {
             // Bluetooth card
             PermissionCard(
               isLocationTrackingOn: isBluetoothOn,
-              title: 'Bluetooth',
-              subtitle: "Use Bluetooth when internet is not working",
+              title: AppStrings.bluetoothTitle,
+              subtitle: AppStrings.bluetoothSubtitle,
               icon: Iconsax.bluetooth_copy,
               onChanged: (value) {
                 setState(() {
@@ -95,8 +93,8 @@ class _PermitionManageScreenState extends State<PermissionManageScreen> {
             // Hotspot card
             PermissionCard(
               isLocationTrackingOn: isHotspotOn,
-              title: 'Hotspot',
-              subtitle: "Use Hotspot when internet is not working",
+              title: AppStrings.hotspotTitle,
+              subtitle: AppStrings.hotspotSubtitle,
               icon: Iconsax.global_copy,
               onChanged: (value) {
                 setState(() {
@@ -109,8 +107,8 @@ class _PermitionManageScreenState extends State<PermissionManageScreen> {
             // Contacts card
             PermissionCard(
               isLocationTrackingOn: isContactsOn,
-              title: 'Allow Contacts',
-              subtitle: "Access your contacts to find friends",
+              title: AppStrings.contactsTitle,
+              subtitle: AppStrings.contactsSubtitle,
               icon: Iconsax.book_copy,
               onChanged: (value) {
                 setState(() {
@@ -122,8 +120,14 @@ class _PermitionManageScreenState extends State<PermissionManageScreen> {
             SizedBox(height: 60),
 
             NextButton(
-              text: "Allow All",
+              text: AppStrings.allowAll,
               onPressed: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const AccountCreatingSuccessScreen()),
+                );
+
                 setState(() {
                   isLocationTrackingOn = true;
                   isWifiOn = true;
